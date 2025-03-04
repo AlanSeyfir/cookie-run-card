@@ -1,31 +1,40 @@
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { Card } from './components/Card';
 
 function App() {
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
 
   return (
     <>
-      <h1 className="container p-4 text-5xl bg-sky-900 text-sky-50 font-bold text-center">Cookie Run 🍪</h1>
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        <h1 className="container p-4 text-5xl bg-sky-900 text-sky-50 font-bold text-center">Cookie Run 🍪</h1>
 
-      <header>
-        Info of the player
-      </header>
+        <header>
+          Info of the player
+        </header>
 
-      <section>
-        Characters (Cookies)
-      </section>
-
-      <main>
         <section>
-          Card
+          Characters (Cookies)
         </section>
-      </main>
 
-      <section>
-        Card options
-      </section>
+        <main>
+          <Card />
+        </main>
 
-      <footer>
-        Socials
-      </footer>
+        <section>
+          Card options
+        </section>
+
+        <footer>
+          Socials
+        </footer>
+      </ThemeProvider>
     </>
   )
 }
