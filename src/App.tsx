@@ -1,6 +1,7 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Card } from './components/Card';
+import { Typography } from '@mui/material';
 
 function App() {
   const darkTheme = createTheme({
@@ -13,7 +14,7 @@ function App() {
     <>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <h1 className="container p-4 text-5xl bg-sky-900 text-sky-50 font-bold text-center">Cookie Run 🍪</h1>
+        <Typography variant='h2' className='bg-sky-500 p-4 text-sky-50 text-center'>Cookie Run 🍪</Typography>
 
         <header>
           Info of the player
@@ -22,7 +23,7 @@ function App() {
         <section>
           Characters (Cookies)
         </section>
-
+        
         <main>
           <Card />
         </main>

@@ -1,0 +1,10 @@
+*{
+  color: #eeeef0;
+}
+
+.image-gradient {
+  width: 100%;
+  height: auto;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.99), transparent);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.99), transparent);
+}
