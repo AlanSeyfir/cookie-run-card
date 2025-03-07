@@ -1,4 +1,4 @@
-import { Box, Container, ImageList, ImageListItem, ImageListItemBar, Typography } from "@mui/material"
+import { Box, Container, Grid2, ImageList, ImageListItem, ImageListItemBar, Typography } from "@mui/material"
 import './style.css';
 
 const Card = () => {
@@ -45,53 +45,61 @@ const Card = () => {
 
                 <Box component={"section"} className="cookie__stats" sx={{ textAlign: "center" }} width={"50%"}>
                     <Box component={"section"} display={"flex"} className="cookie__stats">
-                        <Box className="cookie__stats__general mt-6">
+                        <Box className="cookie__stats__general mt-2">
 
-                            <Box className="cookie__stats_power m-4 p-4 rounded-full" sx={{ backgroundColor: "#15161a" }}>
+                            <Box className="cookie__stats_power border m-4 p-2 rounded-full" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
                                 <Typography variant="h3" sx={{ fontSize: "1rem" }}>Power</Typography>
-                                <Typography variant="body1" sx={{ fontSize: "1.5rem", color: "#b3dcb4" }}>500,000</Typography>
+                                <Typography variant="body1" sx={{ fontSize: "2.3rem", color: "#b3dcb4" }}>500,000</Typography>
                             </Box>
 
-                            <Box display={"flex"} flexWrap={"wrap"} justifyContent={"center"} className="cookie__stats__stars m-4 p-4" >
-                                <Box display={"flex"} className="p-4" sx={{ backgroundColor: "#15161a" }}>
-                                    <span>⭐</span>
-                                    <Typography>100,000</Typography>
-                                </Box>
-                                <Box display={"flex"} className="p-4" sx={{ backgroundColor: "#15161a" }}>
-                                    <span>⭐</span>
-                                    <Typography>100,000</Typography>
-                                </Box>
-                                <Box display={"flex"} className="p-4" sx={{ backgroundColor: "#15161a" }}>
-                                    <span>⭐</span>
-                                    <Typography>100,000</Typography>
-                                </Box>
-                                <Box display={"flex"} className="p-4" sx={{ backgroundColor: "#15161a" }}>
-                                    <span>⭐</span>
-                                    <Typography>100,000</Typography>
-                                </Box>
-                            </Box>
+                            <Grid2 container spacing={2} className="cookie__stats__stars m-4" >
+                                <Grid2 size={6} className="p-1 rounded-full border" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
+                                    <Box display={"flex"} justifyContent={"space-around"}>
+                                        <span>⭐</span>
+                                        <Typography>100,000</Typography>
+                                    </Box>
+                                </Grid2>
+                                <Grid2 size={6} className="p-1 rounded-full border" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
+                                    <Box display={"flex"} justifyContent={"space-around"}>
+                                        <span>⭐</span>
+                                        <Typography>100,000</Typography>
+                                    </Box>
+                                </Grid2>
+                                <Grid2 size={6} className="p-1 rounded-full border" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
+                                    <Box display={"flex"} justifyContent={"space-around"}>
+                                        <span>⭐</span>
+                                        <Typography>100,000</Typography>
+                                    </Box>
+                                </Grid2>
+                                <Grid2 size={6} className="p-1 rounded-full border" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
+                                    <Box display={"flex"} justifyContent={"space-around"}>
+                                        <span>⭐</span>
+                                        <Typography>100,000</Typography>
+                                    </Box>
+                                </Grid2>
+                            </Grid2>
 
-                            <Box className="cookie__stats__effect m-4 p-4" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
-                                <Box sx={{ backgroundColor: "#384474", borderColor: "#2289cd" }}>
-                                    <Typography variant="h3" sx={{ fontSize: ".5rem" }}>
+                            <Box className="cookie__stats__effect border m-4 p-4 rounded-3xl" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
+                                <Box width={"50%"} className="border-2 rounded-full m-auto" sx={{ backgroundColor: "#384474", borderColor: "#2289cd" }}>
+                                    <Typography className="p-1" variant="h3" sx={{ fontSize: "1rem" }}>
                                         Effect
                                     </Typography>
                                 </Box>
-                                <Box>
-                                    <Typography>
-                                        <span>ATK</span> 5.0%
+                                <Box className="text-start mt-3">
+                                    <Typography className="pb-2">
+                                        <span className="font-semibold">ATK</span> 5.0%
                                     </Typography>
-                                    <Typography>
-                                        <span>HP</span> -
+                                    <Typography className="pb-2">
+                                        <span className="font-semibold">HP</span> -
                                     </Typography>
-                                    <Typography>
-                                        <span>CRIT%</span> 5.0%
+                                    <Typography className="pb-2">
+                                        <span className="font-semibold">CRIT%</span> 5.0%
                                     </Typography>
                                 </Box>
                             </Box>
                         </Box>
 
-                        <Box className="cookie__stats__detail mt-6">
+                        <Box className="cookie__stats__detail mt-2">
                             <Container>
                                 <Box>
                                     <Typography>⭐</Typography>
