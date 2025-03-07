@@ -16,23 +16,23 @@ function App() {
         <CssBaseline />
         <Typography variant='h2' className='bg-sky-500 p-4 text-sky-50 text-center'>Cookie Run 🍪</Typography>
 
-        <header>
+        <header className='m-4'>
           Info of the player
         </header>
 
-        <section>
+        <section className='m-4'>
           Characters (Cookies)
         </section>
-        
+
         <main>
           <Card />
         </main>
 
-        <section>
+        <section className='m-4'>
           Card options
         </section>
 
-        <footer>
+        <footer className='m-4'>
           Socials
         </footer>
       </ThemeProvider>

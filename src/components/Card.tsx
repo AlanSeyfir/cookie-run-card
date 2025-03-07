@@ -4,10 +4,10 @@ import './style.css';
 const Card = () => {
     return (
         <>
-            <Container component={"article"} maxWidth="md" sx={{ display: "flex", borderRadius: "10px", overflow: "hidden" }} style={{ padding: 0, backgroundColor: "#191b27" }}>
-                <Box component={"section"} className="cookie__profile">
+            <Container component={"article"} maxWidth="lg" sx={{ display: "flex", borderRadius: "10px", overflow: "hidden" }} style={{ padding: 0, backgroundColor: "#191b27" }}>
+                <Box component={"section"} className="cookie__profile" width={"90%"}>
                     <ImageList
-                        sx={{ width: 500, height: 450 }}
+                        sx={{ height: "100%" }}
                         variant="standard"
                         cols={1}
                     >
@@ -43,7 +43,7 @@ const Card = () => {
                     </ImageList>
                 </Box>
 
-                <Box component={"section"} className="cookie__stats" sx={{ textAlign: "center" }} width={"50%"}>
+                <Box component={"section"} className="cookie__stats" sx={{ textAlign: "center" }} width={"100%"}>
                     <Box component={"section"} display={"flex"} className="cookie__stats">
                         <Box className="cookie__stats__general mt-2">
 
