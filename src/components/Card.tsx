@@ -47,31 +47,31 @@ const Card = () => {
                     <Box component={"section"} display={"flex"} className="cookie__stats">
                         <Box className="cookie__stats__general mt-6">
 
-                            <Box className="cookie__stats_power mb-4 p-4" sx={{ backgroundColor: "#15161a" }}>
+                            <Box className="cookie__stats_power m-4 p-4 rounded-full" sx={{ backgroundColor: "#15161a" }}>
                                 <Typography variant="h3" sx={{ fontSize: "1rem" }}>Power</Typography>
                                 <Typography variant="body1" sx={{ fontSize: "1.5rem", color: "#b3dcb4" }}>500,000</Typography>
                             </Box>
 
-                            <Box display={"flex"} flexWrap={"wrap"} justifyContent={"center"} className="cookie__stats__stars mb-4 p-4" sx={{ backgroundColor: "#15161a" }}>
-                                <Box display={"flex"}>
+                            <Box display={"flex"} flexWrap={"wrap"} justifyContent={"center"} className="cookie__stats__stars m-4 p-4" >
+                                <Box display={"flex"} className="p-4" sx={{ backgroundColor: "#15161a" }}>
                                     <span>⭐</span>
                                     <Typography>100,000</Typography>
                                 </Box>
-                                <Box display={"flex"}>
+                                <Box display={"flex"} className="p-4" sx={{ backgroundColor: "#15161a" }}>
                                     <span>⭐</span>
                                     <Typography>100,000</Typography>
                                 </Box>
-                                <Box display={"flex"}>
+                                <Box display={"flex"} className="p-4" sx={{ backgroundColor: "#15161a" }}>
                                     <span>⭐</span>
                                     <Typography>100,000</Typography>
                                 </Box>
-                                <Box display={"flex"}>
+                                <Box display={"flex"} className="p-4" sx={{ backgroundColor: "#15161a" }}>
                                     <span>⭐</span>
                                     <Typography>100,000</Typography>
                                 </Box>
                             </Box>
 
-                            <Box className="cookie__stats__effect mb-4 p-4" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
+                            <Box className="cookie__stats__effect m-4 p-4" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
                                 <Box sx={{ backgroundColor: "#384474", borderColor: "#2289cd" }}>
                                     <Typography variant="h3" sx={{ fontSize: ".5rem" }}>
                                         Effect
