@@ -4,8 +4,10 @@ import './style.css';
 const Card = () => {
     return (
         <>
-            <Container component={"article"} maxWidth="lg" sx={{ display: "flex", borderRadius: "10px", overflow: "hidden" }} style={{ padding: 0, backgroundColor: "#191b27" }}>
-                <Box component={"section"} className="cookie__profile" width={"90%"}>
+            <Container component={"article"} maxWidth="lg" sx={{ display: "flex", borderRadius: "10px", overflow: "hidden" }} style={{ padding: 0, backgroundColor: "#191b27", justifyContent: "space-between" }}>
+
+                {/* IMAGE */}
+                <Box component={"section"} className="cookie__profile" width={"90%"} maxWidth={"50%"}>
                     <ImageList
                         sx={{ height: "100%" }}
                         variant="standard"
@@ -43,13 +45,14 @@ const Card = () => {
                     </ImageList>
                 </Box>
 
-                <Box component={"section"} className="cookie__stats" sx={{ textAlign: "center" }} width={"100%"}>
+                {/* DETAILS */}
+                <Box component={"section"} className="cookie__stats" sx={{ textAlign: "center" }} width={"100%"} maxWidth={"50%"}>
                     <Box component={"section"} display={"flex"} className="cookie__stats">
-                        <Box className="cookie__stats__general mt-2">
+                        <Box className="cookie__stats__general mt-2" maxWidth={"50%"}>
 
-                            <Box className="cookie__stats_power border m-4 p-2 rounded-full" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
+                            <Box className="cookie__stats_power border m-4 pt-2 rounded-full" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
                                 <Typography variant="h3" sx={{ fontSize: "1rem" }}>Power</Typography>
-                                <Typography variant="body1" sx={{ fontSize: "2.3rem", color: "#b3dcb4" }}>500,000</Typography>
+                                <Typography variant="body1" sx={{ fontSize: "2.3rem", color: "#b3dcb4", fontWeight: "600" }}>500,000</Typography>
                             </Box>
 
                             <Grid2 container spacing={2} className="cookie__stats__stars m-4" >
@@ -80,12 +83,12 @@ const Card = () => {
                             </Grid2>
 
                             <Box className="cookie__stats__effect border m-4 p-4 rounded-3xl" sx={{ backgroundColor: "#15161a", borderColor: "#232941" }}>
-                                <Box width={"50%"} className="border-2 rounded-full m-auto" sx={{ backgroundColor: "#384474", borderColor: "#2289cd" }}>
+                                <Box width={"50%"} maxWidth={"40%"} className="border-2 rounded-full m-auto" sx={{ backgroundColor: "#384474", borderColor: "#2289cd", position: "relative", bottom: "30px" }}>
                                     <Typography className="p-1" variant="h3" sx={{ fontSize: "1rem" }}>
                                         Effect
                                     </Typography>
                                 </Box>
-                                <Box className="text-start mt-3">
+                                <Box className="text-start">
                                     <Typography className="pb-2">
                                         <span className="font-semibold">ATK</span> 5.0%
                                     </Typography>
@@ -99,21 +102,23 @@ const Card = () => {
                             </Box>
                         </Box>
 
-                        <Box className="cookie__stats__detail mt-2">
-                            <Container>
-                                <Box>
+                        <Box className="cookie__stats__detail mt-2" maxWidth={"50%"}>
+                            <Container sx={{ backgroundColor: "#15161a", border: 1, borderColor: "#232941", display: "flex", borderRadius: "calc(infinity * 1px)", padding: "0.5rem", margin: "1rem" }}>
+                                <Box sx={{ paddingRight: "1rem", borderRight: 1, borderRightColor: "#232941",  }}>
                                     <Typography>⭐</Typography>
-                                    <Box>
-                                        <Typography>
+                                    <Box sx={{backgroundColor: "#013071"}}>
+                                        <Typography sx={{ color: "#228BCD" }}>
                                             EPIC
                                         </Typography>
-                                        <Typography>
+                                        <Typography sx={{ color: "#32B2F2" }}>
                                             +12
                                         </Typography>
                                     </Box>
                                 </Box>
-                                <Box>
-                                    <Typography>Cooldown +5%</Typography>
+                                <Box sx={{ marginLeft: "1rem" }}>
+                                    <Typography>Cooldown 1.7%</Typography>
+                                    <Typography>DMG Resist +5%</Typography>
+                                    <Typography>ATK 4%</Typography>
                                 </Box>
                             </Container>
                         </Box>
