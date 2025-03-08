@@ -104,23 +104,26 @@ const Card = () => {
 
                         <Box className="cookie__stats__detail mt-2" maxWidth={"50%"}>
                             <Container sx={{ backgroundColor: "#15161a", border: 1, borderColor: "#232941", display: "flex", borderRadius: "calc(infinity * 1px)", padding: "0.5rem", margin: "1rem" }}>
-                                <Box sx={{ paddingRight: "1rem", borderRight: 1, borderRightColor: "#232941",  }}>
+                                <Box display={"flex"} alignItems={"center"} justifyContent={"center"} sx={{ paddingRight: "1rem", borderRight: 1, borderRightColor: "#232941" }}>
                                     <Typography>⭐</Typography>
-                                    <Box sx={{backgroundColor: "#013071"}}>
-                                        <Typography sx={{ color: "#228BCD" }}>
-                                            EPIC
+                                    <Box>
+                                        <Typography sx={{ borderRadius: "calc(infinity * 1px)", padding: ".3rem", backgroundColor: "#013071", color: "#228BCD" }}>
+                                            DEC
                                         </Typography>
                                         <Typography sx={{ color: "#32B2F2" }}>
                                             +12
                                         </Typography>
                                     </Box>
                                 </Box>
-                                <Box sx={{ marginLeft: "1rem" }}>
+                                <Box sx={{ marginLeft: "1rem", textAlign: "start" }}>
                                     <Typography>Cooldown 1.7%</Typography>
                                     <Typography>DMG Resist +5%</Typography>
                                     <Typography>ATK 4%</Typography>
                                 </Box>
                             </Container>
+                            <Box sx={{ borderRadius:"calc(infinity * 1px)", backgroundColor: "#CF68FF", color: "#0A0B21" }}>
+                                Cooldown +5%
+                            </Box>
                         </Box>
                     </Box>
                 </Box>
