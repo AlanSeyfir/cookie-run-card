@@ -25,22 +25,30 @@ const Card = () => {
                             {/* HEADER */}
                             <ImageListItemBar
                                 sx={{
+                                    padding:".5rem",
                                     background:
                                         'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
                                         'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+                                    "& .MuiImageListItemBar-title": { fontWeight:"bold", marginRight:".2rem" },
+                                    "& .MuiImageListItemBar-subtitle": { color:"rgba(255, 255, 255, .5)" },
                                 }}
-                                title="CocoaMixtle - Michi Cookie"
+                                title="CocoaMixtle "
+                                subtitle="- Michi Cookie"
                                 position="top"
                             />
 
                             {/* FOOTER */}
                             <ImageListItemBar
                                 sx={{
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    justifyContent: "center",
+                                    background: "rgba(0, 0, 0, 0)"
                                 }}
-                                title="{item.title}"
-                                subtitle="{item.author}"
-                            />
+                                actionIcon={
+                                    <img className="p-4 w-[11rem]" src="public/img/Ascension_star_2.webp" alt="Ascension star 2" />
+                                }
+                            >
+                            </ImageListItemBar>
                         </ImageListItem>
                     </ImageList>
                 </Box>
@@ -103,14 +111,14 @@ const Card = () => {
                         </Box>
 
                         <Box className="cookie__stats__detail mt-2" maxWidth={"50%"}>
-                            <Container sx={{ backgroundColor: "#15161a", border: 1, borderColor: "#232941", display: "flex", borderRadius: "calc(infinity * 1px)", padding: "0.5rem", margin: "1rem" }}>
+                            <Container sx={{ backgroundColor: "#15161a", border: 1, borderColor: "#232941", display: "flex", borderRadius: "calc(infinity * 1px)", padding: "0.5rem", marginTop: "1rem" }}>
                                 <Box display={"flex"} alignItems={"center"} justifyContent={"center"} sx={{ paddingRight: "1rem", borderRight: 1, borderRightColor: "#232941" }}>
-                                    <Typography>⭐</Typography>
+                                    <Typography sx={{ fontSize: "2.5rem" }}>⭐</Typography>
                                     <Box>
                                         <Typography sx={{ borderRadius: "calc(infinity * 1px)", padding: ".3rem", backgroundColor: "#013071", color: "#228BCD" }}>
                                             DEC
                                         </Typography>
-                                        <Typography sx={{ color: "#32B2F2" }}>
+                                        <Typography sx={{ color: "#32B2F2", textAlign: "start" }}>
                                             +12
                                         </Typography>
                                     </Box>
@@ -121,7 +129,7 @@ const Card = () => {
                                     <Typography>ATK 4%</Typography>
                                 </Box>
                             </Container>
-                            <Box sx={{ borderRadius:"calc(infinity * 1px)", backgroundColor: "#CF68FF", color: "#0A0B21" }}>
+                            <Box sx={{ borderRadius: "calc(infinity * 1px)", backgroundColor: "#CF68FF", color: "#0A0B21", marginTop: "1rem", marginLeft: "0.1875rem", width: "50%" }}>
                                 Cooldown +5%
                             </Box>
                         </Box>
