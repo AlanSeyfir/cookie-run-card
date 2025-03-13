@@ -28,10 +28,6 @@ function App() {
           <Card />
         </main>
 
-        <section className='m-4'>
-          Card options
-        </section>
-
         <footer className='m-4'>
           Socials
         </footer>
